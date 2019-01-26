@@ -2,8 +2,8 @@
 window.onload = preloaderImages;
 
 //declare  variable 
-var arrayIndex = 0;
-var bannerImages = new Array("images/banner1.jpg", "images/banner2.jpg", "images/banner3.jpg");
+let arrayIndex = 0;
+let bannerImages = new Array("images/banner1.jpg", "images/banner2.jpg", "images/banner3.jpg");
 
 //The function to rotate the images.
 function preloaderImages() {
