@@ -4,42 +4,8 @@
 <head>
     <title>Invitation Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script language="javascript">
+    <script type="text/javascript" src="js/gallery.js"></script>
 
-      let arrayIndex = 0;
-      let bannerImages = [
-    "images/event.jpg", 
-    "images/firefighter.jpg", 
-    "images/silhouette.jpg",
-    "images/work. jpg"
-];       
-      let lastIndex = 0;
-
-        function mouseRollOver(MyImage) {
-          //loging the initial Image
-          console.log(MyImage);
-          //finding index of initial Image in bannerImage Array
-        var indexImage = bannerImages.indexOf(MyImage.src);
-        console.log(indexImage);
-        //
-        lastIndex=indexImage;
-        arrayIndex = indexImage;
-        arrayIndex++;
-
-        MyImage.src = bannerImages[arrayIndex];
-     
-         //console.log(bannerImages);
-         
-         console.log(arrayIndex);
-
-      
-    }
-    function mouseUnRoll(MyImage) {
-
-             MyImage.src = bannerImages[lastIndex];
-    }
-        
-</script>
 </head>
 
 <body>
