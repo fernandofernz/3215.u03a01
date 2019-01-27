@@ -4,6 +4,42 @@
 <head>
     <title>Invitation Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script language="javascript">
+
+      let arrayIndex = 0;
+      let bannerImages = [
+    "images/event.jpg", 
+    "images/firefighter.jpg", 
+    "images/silhouette.jpg",
+    "images/work. jpg"
+];       
+      let lastIndex = 0;
+
+        function mouseRollOver(MyImage) {
+          //loging the initial Image
+          console.log(MyImage);
+          //finding index of initial Image in bannerImage Array
+        var indexImage = bannerImages.indexOf(MyImage.src);
+        console.log(indexImage);
+        //
+        lastIndex=indexImage;
+        arrayIndex = indexImage;
+        arrayIndex++;
+
+        MyImage.src = bannerImages[arrayIndex];
+     
+         //console.log(bannerImages);
+         
+         console.log(arrayIndex);
+
+      
+    }
+    function mouseUnRoll(MyImage) {
+
+             MyImage.src = bannerImages[lastIndex];
+    }
+        
+</script>
 </head>
 
 <body>
@@ -31,7 +67,9 @@
 
 <div class="gallery">
   <a target="_blank" href="images/firefighter.jpg">
-    <img src="images/firefighter.jpg" alt="firefighter" width="300" height="200">
+    <img src="images/firefighter.jpg" alt="firefighter" width="300" height="200"
+     onMouseOver="mouseRollOver(this)"
+     onmouseout="mouseUnRoll(this)"/>
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>

@@ -15,7 +15,7 @@ function preloaderImages() {
     if (arrayIndex == bannerImages.length) {
         arrayIndex = 0;
     }
-    document.getElementById("ban").src = bannerImages[arrayIndex];
+    document.getElementById("preLoadedBanner").src = bannerImages[arrayIndex];
 
     setTimeout(preloaderImages, 3 * 1000);
 }
