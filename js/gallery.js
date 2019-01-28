@@ -21,6 +21,7 @@ if (i == arrayImages.length) {
     i = 0;
 }
 console.log("loaded");
+console.log(arrayImages);
 }
 
 //function mouseRollOver
