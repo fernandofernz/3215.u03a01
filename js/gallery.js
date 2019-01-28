@@ -43,7 +43,6 @@ function mouseRollOver (MyImage) {
    
 //function mouseUnRoll
 function mouseUnRoll (MyImage) {
-    console.log('mouse out');
      //image passed in
      var imageIn = MyImage.getAttribute('src')
      //index of image passed in
