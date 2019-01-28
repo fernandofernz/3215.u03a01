@@ -1,5 +1,5 @@
 //onload event handler
-window.onload = preloaderImages;
+window.onload = onPageLoad;
 
 //declare  variable 
 let arrayIndex = 0;
@@ -9,7 +9,7 @@ let bannerImages = [
     "images/banner3.jpg"
 ];
 //preloader function
-function preloaderImages() {
+function onPageLoad() {
 
     arrayIndex++;
     if (arrayIndex == bannerImages.length) {

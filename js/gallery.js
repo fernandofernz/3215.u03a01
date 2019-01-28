@@ -1,42 +1,59 @@
-window.onload = preloaderImages;
-
+//on load event handler
+window.onload= onPageLoad;
+var i = 0;
 let arrayIndex = 0;
-let bannerImages = [
-"images/event.jpg", 
-"images/firefighter.jpg", 
-"images/silhouette.jpg",
-"images/work. jpg"
-];       
-let lastIndex = 0;
+//array of Images to preLoad
+let arrayImages = [
+    "images/event.jpg", 
+    "images/event_off.jpg", 
+    "images/firefighter.jpg",
+    "images/firefighter_off.jpg", 
+    "images/silhouette.jpg", 
+    "images/silhouette_off.jpg",
+    "images/work.jpg", 
+    "images/work_off.jpg"
+];
 
-function preloaderImages () {
-  console.log(bannerImages);
+//function preLoader
+function onPageLoad () {
+i++;
+if (i == arrayImages.length) {
+    i = 0;
+}
+console.log("loaded");
 }
 
-function mouseRollOver(MyImage) {
-    //loging the initial Image
-    console.log(MyImage);
-    //finding index of initial Image in bannerImage Array
-  var indexImage = bannerImages.indexOf(MyImage.src);
-  console.log(indexImage);
-  //
-  lastIndex=indexImage;
-  arrayIndex = indexImage;
-  arrayIndex++;
+//function mouseRollOver
+function mouseRollOver (MyImage) {
+    //image passed in
+    var imageIn = MyImage.getAttribute('src')
+    //index of image passed in
+    var indexImageIn = arrayImages.indexOf(imageIn);
+    //storing and increasing index of array
+    arrayIndex = indexImageIn; 
+    arrayIndex++;
+    //storing new source
+    var newSource = arrayImages[arrayIndex]
+    //passing new source
+    MyImage.src = newSource;
 
-  MyImage.src = bannerImages[arrayIndex];
+}
 
-   //console.log(bannerImages);
    
-   console.log(arrayIndex);
-
-
+//function mouseUnRoll
+function mouseUnRoll (MyImage) {
+    console.log('mouse out');
+     //image passed in
+     var imageIn = MyImage.getAttribute('src')
+     //index of image passed in
+     var indexImageIn = arrayImages.indexOf(imageIn);
+     //storing and decreasing index of array
+     arrayIndex = indexImageIn; 
+     arrayIndex--;
+     //storing new source
+     var newSource = arrayImages[arrayIndex]
+     //passing new source
+     MyImage.src = newSource;
 }
 
-function mouseUnRoll(MyImage) {
-      console.log(MyImage);
-      console.log(lastIndex);
-      MyImage.src = bannerImages[lastIndex];
-     
 
-}
