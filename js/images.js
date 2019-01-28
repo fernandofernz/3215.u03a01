@@ -17,5 +17,5 @@ function onPageLoad() {
     }
     document.getElementById("preLoadedBanner").src = bannerImages[arrayIndex];
 
-    setTimeout(preloaderImages, 3 * 1000);
+    setTimeout(onPageLoad, 3 * 1000);
 }
